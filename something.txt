@@ -1,0 +1,27 @@
+We know JavaScript
+We can code in JavaScript
+We can play with objects/arrays
+
+
+But the data stored in DB is not in js objects or arrays.
+In SQL, the data is stored in tables
+In NoSQL, the data is stored in JSON/BSON
+
+Either tables or JSON none of them is in JS to perform in CRUD operations.
+
+To solve this problem, we have:
+=> ORM -> Object Relational Mapper used for SQL which converts table rows & columns to JS objects
+=> ODM -> Object Document Mapper used for NoSQL which converts JSON/BSON to JS objects
+
+For example:
+    - In SQL
+        Get all users in SQL will be,
+            SELECT * FROM USERS;
+
+        SELECT * FROM users WHERE id=1
+
+    - In NoSQL
+        Get all users will be,
+            Users.findAll()
+
+        User.find({_id:1})

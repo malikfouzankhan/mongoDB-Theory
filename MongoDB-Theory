@@ -1,0 +1,46 @@
+MongoDB - Quick understanding
+--------------------------------------------------------------------------------------------------------------------
+| Topic                      | Short answer                                                                        |
+--------------------------------------------------------------------------------------------------------------------
+| What is MongoDB?           | A NoSQL database that stores data in JSON-like documents instead of tables          |
+| Why use MongoDB?           | Flexible schema (easy changes), fast development, handles large & unstructured data |
+| When to use?               | Web/mobile apps, user profiles, products, chats, logs, social media style data      |
+| When not to use?           | Banking, heavy transactions, many complex realtionships -> better use SQL           |
+--------------------------------------------------------------------------------------------------------------------
+How to use MongoDB (basic idea)
+1. Install MongoDB or use MongoDB Atlas (cloud)
+2. Define a collection (like table)
+3. Insert JSON-like documents
+4. Query documents (find, update, delete)
+
+Example document:
+{
+    "name": "Fouzan",
+    "age": 22,
+    "skills": ["JS", "React"]
+}
+
+What is an ORM?
+- ORM = Object Relational Mapper
+- Converts database records <--> code objects automatically
+- Used mostly in SQL databases (example: Sequelize, Prisma)
+
+What is Mongoose?
+- Mongoose is not an ORM, it is an ODM.
+- ODM = Object Document Mapper (for MongoDB)
+- It helps:
+    - define schema (structure)
+    - validate data
+    - easy CRUD methods
+    - avoid writing raw queries
+
+Create MongoDB Account & get MongoDB URI
+Step-by-step (MongoDB Atlas)
+1. Go to https://www.mongodb.com/atlas
+2. Sign in (Google account also works)
+3. Create a project -> Create cluster (Free tier M0)
+4. Add Database user -> set username + password
+5. Add Network Access -> Allow all IPs (0.0.0.0/0)
+6. Click Connect -> Connect your application
+7. Copy the connection string (Mongo URI):
+    mongodb+srv://<username>:<password>@cluster0.xxxx.mongodb.net/myDB
